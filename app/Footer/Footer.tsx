@@ -149,59 +149,70 @@ const Footer = () => {
       <div className="bg-white shadow-xl border   border-gray-400 z-10 rounded-lg p-6 mt-6 w-full max-w-6xl xl:max-w-8xl">
         <h3 className="text-3xl font-bold text-center mb-4">상담 신청</h3>
 
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          <input
-            type="text"
-            name="name"
-            placeholder="성명"
-            value={formData.name}
-            onChange={handleChange}
-            className="border p-2 w-full rounded h-[50px]"
-            required
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="연락처"
-            value={formData.phone}
-            onChange={handleChange}
-            className="border p-2 w-full rounded h-[50px]"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="이메일"
-            value={formData.email}
-            onChange={handleChange}
-            className="border p-2 w-full rounded h-[50px]"
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="문의 사항"
-            value={formData.message}
-            onChange={handleChange}
-            className="border p-2 w-full rounded h-[50px] resize-none"
-            required
-          />
-          <div className="flex justify-center items-center col-span-2">
-            <button
-            disabled={loading}
-              type="submit"
-              className="bg-purple-700 text-white p-2 px-7 rounded-full font-semibold hover:bg-purple-500 transition"
-            >
-              보내기
-            </button>
-          </div>
-        </form>
+        <form onSubmit={handleSubmit} className=" mx-auto p-4 w-full">
+  <div className="grid grid-cols-12 mb-3  gap-4">
+    <div className="col-span-12 md:col-span-6">
+    <input
+    type="text"
+    name="name"
+    placeholder="성명"
+    value={formData.name}
+    onChange={handleChange}
+    className="border p-2 w-full rounded h-[50px]"
+    required
+  /></div>
+  <div className="col-span-12 md:col-span-6">
+  <input
+    type="text"
+    name="phone"
+    placeholder="연락처"
+    value={formData.phone}
+    onChange={handleChange}
+    className="border p-2 w-full rounded h-[50px]"
+    required
+  />
+  </div>
+  <div className="col-span-12 md:col-span-6">
+  <input
+    type="email"
+    name="email"
+    placeholder="이메일"
+    value={formData.email}
+    onChange={handleChange}
+    className="border p-2 w-full rounded h-[50px]"
+    required
+  />
+  </div>
+  <div className="col-span-12 md:col-span-6 lg:col-span-6">
+  <textarea
+    name="message"
+    placeholder="문의 사항"
+    value={formData.message}
+    onChange={handleChange}
+    className="border p-2 w-full rounded h-[50px] resize-none"
+    required
+  />
+    </div>
+  </div>
+  
+  <div className="flex justify-center items-center col-span-2">
+    <button
+      disabled={loading}
+      type="submit"
+      className="bg-purple-700 text-white p-2 px-7 rounded-full font-semibold hover:bg-purple-500 transition"
+    >
+      보내기
+    </button>
+  </div>
+</form>
+
        
       </div>
-      <div className="h-[300px] w-full absolute bottom-30  bg-purple-800 ">
+      <div className="h-[300px] w-full  absolute -bottom-30 md:-bottom-14 lg:-bottom-10 2xl:bottom-0  bg-purple-800 ">
         <div className="flex justify-center text-center mt-50 items-center text-white ">
-          <div>
+          <div className=" px-2 lg:w-[490px] 2xl:w-[520px]">
           <p>
-            상담신청을 해 주시면 담당 상담원이 10분이내에 연락을 드리겠습니다.<br />
+            상담신청을 해 주시면 담당 상담원이 10분이내에 연락을 드리겠습니다.
             연락이 되지 않을시에는 SMS로 전송 드리겠습니다.
           </p>
        
@@ -422,6 +433,7 @@ const Footer = () => {
                 {/* Submit Button */}
                 <div className='flex justify-end gap-5 items-center'>
                   <button
+                   disabled={loading}
                     onClick={handleFinalSubmit} // Call the function directly here
                     type="button" // Change to type button to prevent default form submission
                     className="mt-5 px-8 py-3 cursor-pointer bg-blue-400 text-white rounded-md"

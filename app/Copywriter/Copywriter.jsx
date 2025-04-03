@@ -9,7 +9,7 @@ const navItems = [
 ];
 const CopywriterSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6  px-4 md:px-10 py-10 lg:px-14 xl:px-30 2xl:px-52 py-18 bg-purple-800 p-6 text-white">
+    <div className="grid grid-cols-1 md:grid-cols-3 mt-50 gap-6  px-4 md:px-10 py-10 lg:px-14 xl:px-30 2xl:px-52 py-18 bg-purple-800 p-6 text-white">
       {/* Left Section */}
       <div className="col-span-1">
         <h2 className="text-xl font-bold">투자 경고</h2>
@@ -31,7 +31,7 @@ const CopywriterSection = () => {
       </div>
       
       {/* Middle Section */}
-      <div className="col-span-1 flex justify-center w-full">
+      <div className="col-span-1 flex justify-start md:justify-center w-full">
         <div>
         <h2 className="text-xl font-bold text-white">소개</h2>
         <nav className="space-y-2">

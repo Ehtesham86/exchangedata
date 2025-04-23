@@ -1,6 +1,9 @@
 import StockChart from "../RealStockData/RealStockData";
 
 const HeroSection = () => {
+  const handleTelegramClick = () => {
+    window.open("https://t.me/wave_ex_arbitrage_bot");
+  };
   return (
     <div id="home"
       className="relative bg-cover bg-center h-[750px] lg:h-[450px] flex items-center"
@@ -41,7 +44,7 @@ const HeroSection = () => {
                   매도하여 얻어지는 무위험 고수익을 공유하는 플랫폼입니다.
                 </p>
                 <div className="flex justify-center items-center">
-                  <button onClick={() => document.getElementById("footer").scrollIntoView({ behavior: "smooth" })} className="mt-6 px-12 py-4 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-400 transition-all duration-300">
+                  <button onClick={handleTelegramClick} className="mt-6 px-12 py-4 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-400 transition-all duration-300">
                     지금가입{" "}
                   </button>
                 </div>
@@ -50,7 +53,21 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      
+
+      {/* Fixed Telegram Button */}
+      <div
+        onClick={handleTelegramClick}
+        className="fixed bottom-1/3 right-14 z-70  cursor-pointer  rounded-full transition"
+      ><div className="flex justify-center items-center">
+        <img src="https://res.cloudinary.com/djlpb1ld5/image/upload/v1745390688/images-removebg-preview_dlbf2d.png" alt="image " className="w-20 h-20 "/>
+
+      </div>
+        <p className="text-[#1a759c] border border-[#1a759c] bg-white rounded-lg py-2 px-4 text-sm font-[500] mt-2 text-center ">WaveEx 
+        차익거래시작</p>
+      </div>
     </div>
+   
   );
 };
 

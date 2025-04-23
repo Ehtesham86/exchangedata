@@ -6,7 +6,6 @@ import FAQs from "../FAQs/FAqs"
 import FundingSection from "../FundingSection/FundingSection"
 import Footer from "../Footer/Footer"
 import ExchangeData from "../ExchangeData/Exchange"
-import Apply from "../Apply/Apply"
 import Copywriter from "../Copywriter/Copywriter"
 export function Welcome() {
   return (
@@ -14,7 +13,6 @@ export function Welcome() {
       <Navbar/>
       <div style={{ height: "100vh" }} >
       <HeroSection/> 
-      <Apply/> 
       <ExchangeData/> 
       <ArbitrageStats/> 
       <StockLoan/> 

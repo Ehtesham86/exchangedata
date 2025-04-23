@@ -101,10 +101,10 @@ const Footer = () => {
     // Send email using EmailJS
     emailjs
       .send(
-        "service_2yf608g", // Replace with your EmailJS Service ID
-        "template_dcf4xk9", // Replace with your EmailJS Template ID
+        "service_mscr218", // Replace with your EmailJS Service ID
+        "template_vm65hkf", // Replace with your EmailJS Template ID
         combinedData,
-        "RsJ7KTR_fyeePU8kv" // Replace with your EmailJS Public Key
+        "V26dK8n94XVe-nAss" // Replace with your EmailJS Public Key
       )
       .then(
         (response) => {
@@ -130,19 +130,22 @@ const Footer = () => {
       );
   };
   
-  
+  const handleImageClick = () => {
+    window.open("https://t.me/wave_ex_arbitrage_bot", "_blank"); // <-- yahan apna bot link lagaen
+  };
 
 
   return (
     <div id="footer" className="flex flex-col relative items-center justify-center min-h-screen">
       <div className="text-center">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
-          alt="텔레그램 로고"
-          className="w-24 h-24 mx-auto"
-        />
+      <img
+      src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+      alt="Telegram Logo"
+      className="w-24 h-24 mx-auto cursor-pointer"
+      onClick={handleImageClick}
+    />
         <h2 className="text-xl font-medium text-blue-500 mt-2">
-          지금 Telegram 에 가입하세요!
+        에스크로 거래 기반인 WaveEx의 신개념 <br/> OTC 차익거래를 시작하세요! 
         </h2>
       </div>
 

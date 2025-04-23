@@ -1,6 +1,9 @@
 import React from "react";
 
 const ArbitrageStats = () => {
+  const handleTelegramClick = () => {
+    window.open("https://t.me/wave_ex_arbitrage_bot");
+  };
   return (
     <div id="Community" className="bg-gray-100 flex justify-center w-full items-center h-auto">
       <div className="grid grid-cols-12 px-4 md:px-10 py-10 lg:px-14 xl:px-30 2xl:px-52">
@@ -95,7 +98,7 @@ const ArbitrageStats = () => {
         ))}
       </div>
       <div className="text-center">
-        <button onClick={() => document.getElementById("footer").scrollIntoView({ behavior: "smooth" })} className=" bg-purple-700 text-white px-6 py-3 rounded-md shadow-lg">지금가입
+        <button onClick={handleTelegramClick} className=" bg-purple-700 text-white px-6 py-3 rounded-md shadow-lg">지금가입
         </button>
       </div>
         </div>

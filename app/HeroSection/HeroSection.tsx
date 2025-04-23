@@ -58,9 +58,9 @@ const HeroSection = () => {
       {/* Fixed Telegram Button */}
       <div
         onClick={handleTelegramClick}
-        className="fixed bottom-1/3 right-14 z-70  cursor-pointer  rounded-full transition"
+        className="fixed bottom-1/3 right-6 lg:right-14 z-70  cursor-pointer  rounded-full transition"
       ><div className="flex justify-center items-center">
-        <img src="https://res.cloudinary.com/djlpb1ld5/image/upload/v1745390688/images-removebg-preview_dlbf2d.png" alt="image " className="w-20 h-20 "/>
+        <img src="https://res.cloudinary.com/djlpb1ld5/image/upload/v1745390688/images-removebg-preview_dlbf2d.png" alt="image " className=" w-10 h-10lg:w-20 lg:h-20 "/>
 
       </div>
         <p className="text-[#1a759c] border border-[#1a759c] bg-white rounded-lg py-2 px-4 text-sm font-[500] mt-2 text-center ">WaveEx 
